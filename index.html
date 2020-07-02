@@ -29,9 +29,6 @@ function cirroMobileTrigger() {
     var expiresin = "3600";
     var ampersand = "&&&&&";
 	if (isMobile()){
-		setTimeout(function () {
-			window.location = "https://itunes.apple.com/us/app/cirro-by-tsd/id1436219208?mt=8";
-		}, 25);
 		document.getElementById("goToCirro").href = "cirrobytsd://" + accesstoken + ampersand + refreshtoken + ampersand + expiresin;
 	}else{
 		document.getElementById("goToCirro").href = "https://cirro.tsdweb.com";
