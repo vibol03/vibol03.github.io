@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>DealerFX POC</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<script>
+function isMobile() {
+    if ( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)
+    ) {
+      return true;
+    }else{
+	  return false;
+	}
+  }
+
+function cirroMobileTrigger() {
+	if (isMobile()){
+		setTimeout(function () {
+			window.location = "https://itunes.apple.com/us/app/cirro-by-tsd/id1436219208?mt=8";
+		}, 25);
+		document.getElementById("goToCirro").href = "cirrobytsd://";
+	}else{
+		document.getElementById("goToCirro").href = "https://cirro.tsdweb.com";
+	}
+}
+</script>
+<div>
+<a id="goToCirro" href="" onclick="cirroMobileTrigger();" class="btn btn-primary">Cirro</a>
+</div>
+
+
+
+</html>
